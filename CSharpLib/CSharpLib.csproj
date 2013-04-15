@@ -47,6 +47,7 @@
     <Compile Include="Dialog1.xaml.cs">
       <DependentUpon>Dialog1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Loader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -17,8 +17,7 @@ void DialogLoaderImpl::LoadDialog()
 {
 	try
 	{
-		Dialog1^ dialog;
-		dialog->Show();
+		Loader::LoadDialog();
 	}
 	catch(Exception^ ex)
 	{
