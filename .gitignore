@@ -1,1 +1,6 @@
 MFC-CSharp.opensdf
+Build*
+obj*
+Debug*
+Release*
+ipch*

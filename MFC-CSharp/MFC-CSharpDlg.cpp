@@ -7,6 +7,8 @@
 #include "MFC-CSharpDlg.h"
 #include "afxdialogex.h"
 
+#include "DialogLoaderFactory.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -30,6 +32,7 @@ void CMFCCSharpDlg::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CMFCCSharpDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BUTTON1, &CMFCCSharpDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
 
 
@@ -85,3 +88,19 @@ HCURSOR CMFCCSharpDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CMFCCSharpDlg::OnBnClickedButton1()
+{
+	DialogLoaderFactory factory;
+	IDialogLoader* dialogLoader = factory.GetDialogLoader();
+
+	//try
+	//{
+		dialogLoader->LoadDialog();
+	//}
+	//catch(EETypeLoadingException ex)
+	//{
+
+	//}
+}
